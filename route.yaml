@@ -2,7 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: simple-streamer-route
-  namespace: streamer
+  namespace: okd-streamer
 spec:
   # Bastion Nginx의 server_name 및 Cloudflare 도메인과 일치시켜야 함
   host: service.jellystream-hybrid.com
