@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: simple-streamer-svc
-  namespace: streamer
+  namespace: okd-streamer
 spec:
   selector:
     app: simple-streamer
