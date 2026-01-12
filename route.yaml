@@ -10,7 +10,7 @@ spec:
     kind: Service
     name: simple-streamer-svc
   port:
-    targetPort: 80
+    targetPort: http-port    # 위에서 정한 이름(http-port)을 적습니다.
   tls:
     termination: edge
     insecureEdgeTerminationPolicy: Allow
