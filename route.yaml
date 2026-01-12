@@ -1,16 +1,16 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: simple-streamer-route
+  name: simple-streamer-win
   namespace: okd-streamer
 spec:
-  # Bastion Nginx의 server_name 및 Cloudflare 도메인과 일치시켜야 함
-  host: service.jellystream-hybrid.com
+  host: service.jellystream.win  # 쓰고 싶으신 실제 주소
   to:
     kind: Service
     name: simple-streamer-svc
   port:
-    targetPort: http-port    # 위에서 정한 이름(http-port)을 적습니다.
+    targetPort: 8096-tcp
   tls:
-    termination: edge
+    termination: edge            # 기존 젤리핀처럼 보안 연결 설정
     insecureEdgeTerminationPolicy: Allow
+  wildcardPolicy: None
