@@ -30,7 +30,7 @@ spec:
             memory: "512Mi"
         env:
         - name: DB_HOST
-          value: "hybrid-demo-db.c4dqgm4aut3y.us-east-1.rds.amazonaws.com"
+          value: "hybrid-prod-db.c8bacacucmpz.us-east-1.rds.amazonaws.com"
         - name: DB_NAME
           value: "postgres"
         - name: DB_USER
@@ -38,7 +38,7 @@ spec:
         - name: DB_PASS
           value: "12345678"
         - name: S3_BUCKET
-          value: "hybrid-demo-video-bucket-jki-2026"
+          value: "prod-video-bucket-idac-2026"
         - name: AWS_REGION
           value: "us-east-1"
         - name: AWS_ACCESS_KEY_ID
