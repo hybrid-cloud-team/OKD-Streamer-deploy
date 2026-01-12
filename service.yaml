@@ -4,12 +4,11 @@ metadata:
   name: simple-streamer-svc
   namespace: okd-streamer
 spec:
-  type: NodePort
+  # type: NodePort를 삭제하거나 ClusterIP로 변경 (Nginx가 라우터를 통해 들어가므로)
   selector:
-    app: simple-streamer  # deployment의 selector와 일치해야 함
+    app: simple-streamer
   ports:
   - name: 8096-tcp
     protocol: TCP
-    port: 8096          # 외부에서 접속할 포트
-    targetPort: 8080    # 파드 내부 앱 포트 (현재 8080)
-    nodePort: 32055     # 기존 젤리핀과 동일한 노드포트
+    port: 8096          # 서비스 포트
+    targetPort: 8080    # 앱 내부 포트
