@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: simple-streamer-route
+  namespace: streamer
+spec:
+  # Bastion Nginx의 server_name 및 Cloudflare 도메인과 일치시켜야 함
+  host: service.jellystream-hybrid.com
+  to:
+    kind: Service
+    name: simple-streamer-svc
+  port:
+    targetPort: 80
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Allow
