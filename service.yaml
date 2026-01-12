@@ -4,10 +4,12 @@ metadata:
   name: simple-streamer-svc
   namespace: okd-streamer
 spec:
+  type: NodePort
   selector:
-    app: simple-streamer
+    app: simple-streamer  # deployment의 selector와 일치해야 함
   ports:
-    - name: http-port        # 이름을 추가했습니다.
-      protocol: TCP
-      port: 80
-      targetPort: 8080
+  - name: 8096-tcp
+    protocol: TCP
+    port: 8096          # 외부에서 접속할 포트
+    targetPort: 8080    # 파드 내부 앱 포트 (현재 8080)
+    nodePort: 32055     # 기존 젤리핀과 동일한 노드포트
