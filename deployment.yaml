@@ -19,7 +19,7 @@ spec:
       containers:
       - name: simple-streamer
         # 빌드 시 GitHub Actions가 이 태그 부분을 자동으로 업데이트하게 됩니다.
-        image: 635014547592.dkr.ecr.us-east-1.amazonaws.com/jellyfin-media-api:latest
+        image: image: 635014547592.dkr.ecr.us-east-1.amazonaws.com/jellyfin-media-api:bc869a5a94a8bc14e4204e0f0b00c9b9de2e4f55
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
