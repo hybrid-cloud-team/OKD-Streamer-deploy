@@ -4,13 +4,12 @@ metadata:
   name: simple-streamer-win
   namespace: okd-streamer
 spec:
-  host: service.jellystream.win  # 쓰고 싶으신 실제 주소
+  host: service.jellystream.win  # Nginx의 server_name과 정확히 일치해야 함
   to:
     kind: Service
     name: simple-streamer-svc
   port:
     targetPort: 8096-tcp
   tls:
-    termination: edge            # 기존 젤리핀처럼 보안 연결 설정
+    termination: edge           # Nginx와 라우터 사이의 보안 설정에 맞춰 필요시 유지
     insecureEdgeTerminationPolicy: Allow
-  wildcardPolicy: None
