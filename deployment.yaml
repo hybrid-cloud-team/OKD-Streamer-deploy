@@ -30,7 +30,7 @@ spec:
             memory: "512Mi"
         env:
         - name: DB_HOST
-          value: "hybrid-prod-db-2.c8bacacucmpz.us-east-1.rds.amazonaws.com"
+          value: "192.168.10.10"
         - name: DB_NAME
           value: "videodb"
         - name: DB_USER
