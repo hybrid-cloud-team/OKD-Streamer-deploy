@@ -4,7 +4,7 @@ metadata:
   name: simple-streamer-win
   namespace: okd-streamer
 spec:
-  host: service.jellystream-hybrid.com  # <--- 이 이름을 써야 Nginx가 보내는 신호를 받습니다.
+  host: service.jellystream.win  
   to:
     kind: Service
     name: simple-streamer-svc
