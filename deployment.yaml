@@ -17,7 +17,7 @@ spec:
       - name: ecr-registry-key
       containers:
       - name: simple-streamer
-        image: 635014547592.dkr.ecr.us-east-1.amazonaws.com/streamer:bc869a5a94a8bc14e4204e0f0b00c9b9de2e4f55
+        image: 635014547592.dkr.ecr.us-east-1.amazonaws.com/streamer:516ee930f34cc291b1969e88f125f7efed1f0a77
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
