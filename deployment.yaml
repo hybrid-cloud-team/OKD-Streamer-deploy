@@ -52,4 +52,4 @@ spec:
               name: app-secret
               key: secret-key
         - name: PGSSLMODE
-          value: "disable"
+          value: "require"  # disable에서 require로 변경
