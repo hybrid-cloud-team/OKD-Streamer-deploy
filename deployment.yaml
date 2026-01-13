@@ -51,3 +51,5 @@ spec:
             secretKeyRef:
               name: app-secret
               key: secret-key
+        - name: PGSSLMODE
+          value: "disable"
